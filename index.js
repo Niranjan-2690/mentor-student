@@ -6,10 +6,7 @@ const app = express();
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/mentor-student', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect('mongodb://localhost:27017/mentor-student');
 
 // API to create a Mentor
 app.post('/mentor', async (req, res) => {
