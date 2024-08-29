@@ -117,6 +117,10 @@ app.get('/student/:studentId/mentor', async (req, res) => {
 
 // Start the Server
 const port = 3000;
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
-});
+app.listen(port, "0.0.0.0", (err)=>{
+  if(err){
+    console.log("Error", err)
+  }else{
+    console.log("Server is connected")
+  }
+})
