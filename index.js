@@ -1,12 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const connection = require("./database/connection")
 const { Mentor, Student } = require('./models');
 
 const app = express();
 app.use(express.json());
 
-// Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/mentor-student');
 
 // API to create a Mentor
 app.post('/mentor', async (req, res) => {
@@ -114,10 +113,11 @@ app.get('/student/:studentId/mentor', async (req, res) => {
 
 // Start the Server
 const port = 3000;
-app.listen(port, "0.0.0.0", (err)=>{
+app.listen(port, "localhost", (err)=>{
   if(err){
     console.log("Error", err)
   }else{
     console.log("Server is connected")
   }
+  connection()
 })
