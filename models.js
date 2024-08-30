@@ -7,7 +7,7 @@ const mentorSchema = new mongoose.Schema({
 
 const studentSchema = new mongoose.Schema({
   name: String,
-  mentor: { type: mongoose.Schema.Types.ObjectId, ref: 'Mentor', default: null },
+  mentors: { type: mongoose.Schema.Types.ObjectId, ref: 'Mentor', default: null },
 });
 
 const Mentor = mongoose.model('Mentor', mentorSchema);

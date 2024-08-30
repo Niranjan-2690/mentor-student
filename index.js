@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const connection = require("./database/connection")
+const {connection} = require("./database/connection")
 const { Mentor, Student } = require('./models');
 
 const app = express();
