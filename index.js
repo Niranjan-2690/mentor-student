@@ -10,7 +10,7 @@ app.use("/students", require("./modules/student/student.controller"))
 
 
 // Start the Server
-app.listen(3000, "localhost", (err)=>{
+app.listen(3000, "0.0.0.0", (err)=>{
   if(err){
     console.log("Error", err)
   }else{
