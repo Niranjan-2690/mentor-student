@@ -113,7 +113,7 @@ app.get('/student/:studentId/mentor', async (req, res) => {
 
 // Start the Server
 const port = 3000;
-app.listen(port, "localhost", (err)=>{
+app.listen(port, "0.0.0.0", (err)=>{
   if(err){
     console.log("Error", err)
   }else{
